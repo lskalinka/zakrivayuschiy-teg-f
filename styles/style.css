@@ -128,8 +128,40 @@ dialog::backdrop {
   text-transform: uppercase;
 }
 
+.theme-menu__button:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-menu__button:focus-visible {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button::after {
+  content: "";
+  opacity: 0.6;
+  block-size: 2px;
+  inline-size: 0;
+  background-color: var(--accent-color, #000);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.theme-menu__button:focus-visible::after {
+  inline-size: 100%;
+  transition: inline-size 0.3s ease;
+}
+
 .theme-menu__button:disabled {
   opacity: 0.6;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .theme-menu__button:disabled::before {
@@ -155,9 +187,40 @@ dialog::backdrop {
   padding: 3px 0 3px 7px;
 }
 
-.card_img {
+.card__img-container {
+  position: relative;
+}
+
+.card__img {
   inline-size: 100%;
   aspect-ratio: 1 / 1;
+  position: relative;
+  z-index: 1;
+}
+
+.card__label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 2;
+  mix-blend-mode: hard-light;
+  font-family: var(--accent-font, fantasy);
+  font-size: 14px;
+  opacity: 0.5;
+  text-transform: uppercase;
+  text-shadow:
+  -1px 0 var(--lbl-shadow, #FFF),
+  0 1px var(--lbl-shadow, #FFF),
+  1px 0 var(--lbl-shadow, #FFF),
+  0 -1px var(--lbl-shadow, #FFF);
+}
+
+@supports((text-stroke: 1px var(--lbl-shadow, #FFF)) or (-webkit-text-stroke: 1px var(--lbl-shadow, #FFF))) {
+  .card__label {
+      -webkit-text-stroke: 1px var(--lbl-shadow, #FFF);
+      text-stroke: 1px var(--lbl-shadow, #FFF);
+      text-shadow: none;
+  }
 }
 
 .card__text {

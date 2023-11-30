@@ -8,4 +8,5 @@
   --accent-color: #000;
   --bg-img: repeating-linear-gradient(-90deg, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), repeating-linear-gradient(#d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
   --sc-wdth: clamp(375px, 48vw, 796px);
+  --lbl-shadow: #FFF;
 }
