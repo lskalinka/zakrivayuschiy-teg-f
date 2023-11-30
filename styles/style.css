@@ -65,8 +65,7 @@ dialog::backdrop {
 
 .dialog__img {
   block-size: 39px;
-  inline-size: 39px;
-  background-size: cover;
+  aspect-ratio: 1 / 1;
 }
 
 .dialog__text {
