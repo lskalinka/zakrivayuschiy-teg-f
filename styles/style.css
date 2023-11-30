@@ -167,7 +167,8 @@ dialog::backdrop {
 .theme-menu__button:disabled::before {
   content: '▶';
   position: absolute;
-  left: -20px;
+  left: -24px;
+  animation: menu-arrow 0.5s ease-in-out infinite alternate;
 }
 
 .main {
