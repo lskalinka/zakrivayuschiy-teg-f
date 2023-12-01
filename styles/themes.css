@@ -11,6 +11,7 @@
   --accent-color: #000;
   --bg-img: repeating-linear-gradient(-90deg, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), repeating-linear-gradient(#d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
   --lbl-shadow: #FFF;
+  --btn-pseudo-text: #FFF;
 }
 
 .theme-light .page {
@@ -20,7 +21,7 @@
   background-image: var(--bg-img);
 }
 
-.theme-light .content-section, dialog {
+.theme-light .content-section, .theme-light dialog {
   background-color: var(--bg-color, #FFF);
   border: 2px solid var(--accent-color, #000);
 }
@@ -53,9 +54,22 @@
   background-color: var(--accent-color, #000);
 }
 
-.theme-light .footer__button {
+.theme-light .card__like-button:focus, .theme-light .footer__button:focus {
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
+}
+
+.theme-light .card__like-button::after, .theme-light .footer__button::after {
   background-color: var(--bg-color, #FFF);
+  color: var(--btn-pseudo-text, #FFF);
+}
+
+.theme-light .footer__button {
   border: 2px solid var(--accent-color, #000);
+  color: var(--accent-color, #000);
+}
+
+.theme-light .footer {
+  background-color: var(--bg-color, #FFF);
 }
 
 :root.theme-dark {
@@ -65,6 +79,7 @@
   --accent-color: #00CC14;
   --bg-img: repeating-linear-gradient(-90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px), repeating-linear-gradient(#000 0 2px, rgb(0 0 0 / 0) 2px 4px), linear-gradient(#007f0c, #004306);
   --lbl-shadow: #000;
+  --btn-pseudo-text: #00CC14;
 }
 
 .theme-dark .page {
@@ -74,7 +89,7 @@
   background-image: var(--bg-img);
 }
 
-.theme-dark .content-section, dialog {
+.theme-dark .content-section, .theme-dark dialog {
   background-color: var(--bg-color, #000);
   border: 2px solid var(--accent-color, #00CC14);
 }
@@ -107,9 +122,22 @@
   background-color: var(--accent-color, #00CC14);
 }
 
-.theme-dark .footer__button {
+.theme-dark .card__like-button:focus, .theme-dark .footer__button:focus {
+  box-shadow: 2px 2px 0 var(--accent-color, #00CC14);
+}
+
+.theme-dark .card__like-button::after, .theme-dark .footer__button::after {
+  background-color: var(--accent-color, #00CC14);
+  color: var(--btn-pseudo-text, #00CC14);
+}
+
+.theme-dark .footer {
   background-color: var(--bg-color, #000);
+}
+
+.theme-dark .footer__button {
   border: 2px solid var(--accent-color, #00CC14);
+  color: var(--accent-color, #00CC14);
 }
 
 @media (prefers-color-scheme: light) {
@@ -120,6 +148,7 @@
     --accent-color: #000;
     --bg-img: repeating-linear-gradient(-90deg, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), repeating-linear-gradient(#d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
     --lbl-shadow: #FFF;
+    --btn-pseudo-text: #FFF;
   }
 
   .page {
@@ -162,9 +191,27 @@
     background-color: var(--accent-color, #000);
   }
 
-  .footer__button {
+  .card__like-button:focus, .footer__button:focus {
+    box-shadow: 2px 2px 0 var(--accent-color, #000);
+  }
+
+  .card__like-button::after {
+  background-color: var(--bg-color, #FFF);
+  color: var(--btn-pseudo-text, #FFF);
+  }
+
+  .footer__button::after {
     background-color: var(--bg-color, #FFF);
+    color: var(--btn-pseudo-text, #FFF);
+  }
+
+  .footer {
+  background-color: var(--bg-color, #FFF);
+  }
+
+  .footer__button {
     border: 2px solid var(--accent-color, #000);
+    color: var(--accent-color, #000);
   }
 }
 
@@ -176,6 +223,7 @@
     --accent-color: #00CC14;
     --bg-img: repeating-linear-gradient(-90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px), repeating-linear-gradient(#000 0 2px, rgb(0 0 0 / 0) 2px 4px), linear-gradient(#007f0c, #004306);
     --lbl-shadow: #000;
+    --btn-pseudo-text: #00CC14;
   }
 
     .page {
@@ -218,9 +266,22 @@
       background-color: var(--accent-color, #00CC14);
     }
 
-    .footer__button {
+    .card__like-button:focus, .footer__button:focus {
+      box-shadow: 2px 2px 0 var(--accent-color, #00CC14);
+    }
+
+    .card__like-button::after, .footer__button::after {
+      background-color: var(--accent-color, #00CC14);
+      color: var(--btn-pseudo-text, #00CC14);
+    }
+
+    .footer {
       background-color: var(--bg-color, #000);
+    }
+
+    .footer__button {
       border: 2px solid var(--accent-color, #00CC14);
+      color: var(--accent-color, #00CC14);
     }
 }
 
