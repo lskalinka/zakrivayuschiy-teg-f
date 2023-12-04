@@ -285,7 +285,6 @@ dialog::backdrop {
 
 .card__icon-button {
   margin: 0;
-  border: none;
   border: 2px solid transparent;
   padding: 0;
   background-color: transparent;
