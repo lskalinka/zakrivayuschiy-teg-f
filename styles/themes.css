@@ -7,24 +7,31 @@
 :root.theme-light {
   --main-wght: 400;
   --h-wght: 700;
-  --bg-color: #FFF;
+  --bg-color: #fff;
   --accent-color: #000;
-  --bg-img: repeating-linear-gradient(-90deg, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), repeating-linear-gradient(#d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
-  --lbl-shadow: #FFF;
-  --btn-pseudo-text: #FFF;
+  --bg-img: repeating-linear-gradient(
+      -90deg,
+      #d3d3d3 0 2px,
+      rgb(211 211 211 / 0) 2px 4px
+    ),
+    repeating-linear-gradient(#d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px),
+    linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
+  --lbl-shadow: #fff;
+  --btn-pseudo-text: #fff;
   --like-contour: #000;
 }
 
 .theme-light .page {
-  font-variation-settings: 'wght' var(--main-wght, 400);
-  background-color: var(--bg-color, #FFF);
   color: var(--accent-color, #000);
+  background-color: var(--bg-color, #fff);
   background-image: var(--bg-img);
+  font-variation-settings: "wght" var(--main-wght, 400);
 }
 
-.theme-light .content-section, .theme-light dialog {
-  background-color: var(--bg-color, #FFF);
+.theme-light .content-section,
+.theme-light dialog {
   border: 2px solid var(--accent-color, #000);
+  background-color: var(--bg-color, #fff);
 }
 
 .theme-light .dialog__button {
@@ -32,18 +39,18 @@
 }
 
 .theme-light .card__label {
-  text-shadow:
-  -1px 0 var(--lbl-shadow, #FFF),
-  0 1px var(--lbl-shadow, #FFF),
-  1px 0 var(--lbl-shadow, #FFF),
-  0 -1px var(--lbl-shadow, #FFF);
+  text-shadow: -1px 0 var(--lbl-shadow, #fff), 0 1px var(--lbl-shadow, #fff),
+    1px 0 var(--lbl-shadow, #fff), 0 -1px var(--lbl-shadow, #fff);
 }
 
-@supports((text-stroke: 1px var(--lbl-shadow, #FFF)) or (-webkit-text-stroke: 1px var(--lbl-shadow, #FFF))) {
+@supports (
+  (text-stroke: 1px var(--lbl-shadow, #fff)) or
+    (-webkit-text-stroke: 1px var(--lbl-shadow, #fff))
+) {
   .theme-light .card__label {
-      -webkit-text-stroke: 1px var(--lbl-shadow, #FFF);
-      text-stroke: 1px var(--lbl-shadow, #FFF);
-      text-shadow: none;
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--lbl-shadow, #fff);
+    text-stroke: 1px var(--lbl-shadow, #fff);
   }
 }
 
@@ -67,13 +74,15 @@
   fill: var(--like-contour, #000);
 }
 
-.theme-light .card__like-button:focus, .theme-light .footer__button:focus {
+.theme-light .card__like-button:focus,
+.theme-light .footer__button:focus {
   box-shadow: 2px 2px 0 var(--accent-color, #000);
 }
 
-.theme-light .card__like-button::after, .theme-light .footer__button::after {
-  background-color: var(--bg-color, #FFF);
-  color: var(--btn-pseudo-text, #FFF);
+.theme-light .card__like-button::after,
+.theme-light .footer__button::after {
+  color: var(--btn-pseudo-text, #fff);
+  background-color: var(--bg-color, #fff);
 }
 
 .theme-light .footer__button {
@@ -82,79 +91,88 @@
 }
 
 .theme-light .footer {
-  background-color: var(--bg-color, #FFF);
+  background-color: var(--bg-color, #fff);
 }
 
 :root.theme-dark {
   --main-wght: 465;
   --h-wght: 785;
   --bg-color: #000;
-  --accent-color: #00CC14;
-  --bg-img: repeating-linear-gradient(-90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px), repeating-linear-gradient(#000 0 2px, rgb(0 0 0 / 0) 2px 4px), linear-gradient(#007f0c, #004306);
+  --accent-color: #00cc14;
+  --bg-img: repeating-linear-gradient(
+      -90deg,
+      #000 0 2px,
+      rgb(0 0 0 / 0) 2px 4px
+    ),
+    repeating-linear-gradient(#000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    linear-gradient(#007f0c, #004306);
   --lbl-shadow: #000;
-  --btn-pseudo-text: #00CC14;
-  --like-contour: #00CC14;
+  --btn-pseudo-text: #00cc14;
+  --like-contour: #00cc14;
 }
 
 .theme-dark .page {
-  font-variation-settings: 'wght' var(--main-wght, 465);
+  color: var(--accent-color, #00cc14);
   background-color: var(--bg-color, #000);
-  color: var(--accent-color, #00CC14);
   background-image: var(--bg-img);
+  font-variation-settings: "wght" var(--main-wght, 465);
 }
 
-.theme-dark .content-section, .theme-dark dialog {
+.theme-dark .content-section,
+.theme-dark dialog {
+  border: 2px solid var(--accent-color, #00cc14);
   background-color: var(--bg-color, #000);
-  border: 2px solid var(--accent-color, #00CC14);
 }
 
 .theme-dark .dialog__button {
-  border: 2px solid var(--accent-color, #00CC14);
+  border: 2px solid var(--accent-color, #00cc14);
 }
 
 .theme-dark .card__label {
-  text-shadow:
-  -1px 0 var(--lbl-shadow, #000),
-  0 1px var(--lbl-shadow, #000),
-  1px 0 var(--lbl-shadow, #000),
-  0 -1px var(--lbl-shadow, #000);
+  text-shadow: -1px 0 var(--lbl-shadow, #000), 0 1px var(--lbl-shadow, #000),
+    1px 0 var(--lbl-shadow, #000), 0 -1px var(--lbl-shadow, #000);
 }
 
-@supports((text-stroke: 1px var(--lbl-shadow, #000)) or (-webkit-text-stroke: 1px var(--lbl-shadow, #000))) {
+@supports (
+  (text-stroke: 1px var(--lbl-shadow, #000)) or
+    (-webkit-text-stroke: 1px var(--lbl-shadow, #000))
+) {
   .theme-dark .card__label {
-      -webkit-text-stroke: 1px var(--lbl-shadow, #000);
-      text-stroke: 1px var(--lbl-shadow, #000);
-      text-shadow: none;
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--lbl-shadow, #000);
+    text-stroke: 1px var(--lbl-shadow, #000);
   }
 }
 
 .theme-dark .card__icon-button:focus-visible {
-  border: 2px solid var(--accent-color, #00CC14);
+  border: 2px solid var(--accent-color, #00cc14);
 }
 
 .theme-dark .card__icon-button:hover .core {
-  fill: var(--like-contour, #00CC14);
+  fill: var(--like-contour, #00cc14);
 }
 
 .theme-dark .card__icon-button:hover .main-body {
-  fill: var(--like-contour, #00CC14);
+  fill: var(--like-contour, #00cc14);
 }
 
 .theme-dark .card__like-button {
-  border: 2px solid var(--accent-color, #00CC14);
+  border: 2px solid var(--accent-color, #00cc14);
 }
 
 .theme-dark .theme-menu__button:focus-visible::after {
-  background-color: var(--accent-color, #00CC14);
+  background-color: var(--accent-color, #00cc14);
 }
 
-.theme-dark .card__like-button:focus, .theme-dark .footer__button:focus {
-  box-shadow: 2px 2px 0 var(--accent-color, #00CC14);
+.theme-dark .card__like-button:focus,
+.theme-dark .footer__button:focus {
+  box-shadow: 2px 2px 0 var(--accent-color, #00cc14);
 }
 
-.theme-dark .card__like-button::after, .theme-dark .footer__button::after {
-  background-color: var(--accent-color, #00CC14);
-  color: var(--btn-pseudo-text, #00CC14);
+.theme-dark .card__like-button::after,
+.theme-dark .footer__button::after {
+  color: var(--btn-pseudo-text, #00cc14);
+  background-color: var(--accent-color, #00cc14);
 }
 
 .theme-dark .footer {
@@ -162,48 +180,55 @@
 }
 
 .theme-dark .footer__button {
-  border: 2px solid var(--accent-color, #00CC14);
-  color: var(--accent-color, #00CC14);
+  border: 2px solid var(--accent-color, #00cc14);
+  color: var(--accent-color, #00cc14);
 }
 
 @media (prefers-color-scheme: light) {
+  @supports (
+    (text-stroke: 1px var(--lbl-shadow, #fff)) or
+      (-webkit-text-stroke: 1px var(--lbl-shadow, #fff))
+  ) {
+    .card__label {
+      text-shadow: none;
+      -webkit-text-stroke: 1px var(--lbl-shadow, #fff);
+      text-stroke: 1px var(--lbl-shadow, #fff);
+    }
+  }
+
   :root {
     --main-wght: 400;
     --h-wght: 700;
-    --bg-color: #FFF;
+    --bg-color: #fff;
     --accent-color: #000;
-    --bg-img: repeating-linear-gradient(-90deg, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), repeating-linear-gradient(#d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
-    --lbl-shadow: #FFF;
-    --btn-pseudo-text: #FFF;
+    --bg-img: repeating-linear-gradient(
+        -90deg,
+        #d3d3d3 0 2px,
+        rgb(211 211 211 / 0) 2px 4px
+      ),
+      repeating-linear-gradient(#d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px),
+      linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
+    --lbl-shadow: #fff;
+    --btn-pseudo-text: #fff;
     --like-contour: #000;
   }
 
   .page {
-    font-variation-settings: 'wght' var(--main-wght, 400);
-    background-color: var(--bg-color, #FFF);
     color: var(--accent-color, #000);
+    background-color: var(--bg-color, #fff);
     background-image: var(--bg-img);
+    font-variation-settings: "wght" var(--main-wght, 400);
   }
 
-  .content-section, dialog {
-    background-color: var(--bg-color, #FFF);
+  .content-section,
+  dialog {
     border: 2px solid var(--accent-color, #000);
+    background-color: var(--bg-color, #fff);
   }
 
   .card__label {
-    text-shadow:
-    -1px 0 var(--lbl-shadow, #FFF),
-    0 1px var(--lbl-shadow, #FFF),
-    1px 0 var(--lbl-shadow, #FFF),
-    0 -1px var(--lbl-shadow, #FFF);
-  }
-
-  @supports((text-stroke: 1px var(--lbl-shadow, #FFF)) or (-webkit-text-stroke: 1px var(--lbl-shadow, #FFF))) {
-    .card__label {
-        -webkit-text-stroke: 1px var(--lbl-shadow, #FFF);
-        text-stroke: 1px var(--lbl-shadow, #FFF);
-        text-shadow: none;
-    }
+    text-shadow: -1px 0 var(--lbl-shadow, #fff), 0 1px var(--lbl-shadow, #fff),
+      1px 0 var(--lbl-shadow, #fff), 0 -1px var(--lbl-shadow, #fff);
   }
 
   .dialog__button {
@@ -222,30 +247,31 @@
     background-color: var(--accent-color, #000);
   }
 
-  .card__like-button:focus, .footer__button:focus {
+  .card__like-button:focus,
+  .footer__button:focus {
     box-shadow: 2px 2px 0 var(--accent-color, #000);
   }
 
   .card__like-button::after {
-  background-color: var(--bg-color, #FFF);
-  color: var(--btn-pseudo-text, #FFF);
+    color: var(--btn-pseudo-text, #fff);
+    background-color: var(--bg-color, #fff);
   }
 
-.card__icon-button:hover .core {
+  .card__icon-button:hover .core {
     fill: var(--like-contour, #000);
   }
 
-.card__icon-button:hover .main-body {
+  .card__icon-button:hover .main-body {
     fill: var(--like-contour, #000);
   }
 
   .footer__button::after {
-    background-color: var(--bg-color, #FFF);
-    color: var(--btn-pseudo-text, #FFF);
+    color: var(--btn-pseudo-text, #fff);
+    background-color: var(--bg-color, #fff);
   }
 
   .footer {
-  background-color: var(--bg-color, #FFF);
+    background-color: var(--bg-color, #fff);
   }
 
   .footer__button {
@@ -255,85 +281,93 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  @supports (
+    (text-stroke: 1px var(--lbl-shadow, #000)) or
+      (-webkit-text-stroke: 1px var(--lbl-shadow, #000))
+  ) {
+    .theme-dark .card__label {
+      text-shadow: none;
+      -webkit-text-stroke: 1px var(--lbl-shadow, #000);
+      text-stroke: 1px var(--lbl-shadow, #000);
+    }
+  }
+
   :root {
     --main-wght: 465;
     --h-wght: 785;
     --bg-color: #000;
-    --accent-color: #00CC14;
-    --bg-img: repeating-linear-gradient(-90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px), repeating-linear-gradient(#000 0 2px, rgb(0 0 0 / 0) 2px 4px), linear-gradient(#007f0c, #004306);
+    --accent-color: #00cc14;
+    --bg-img: repeating-linear-gradient(
+        -90deg,
+        #000 0 2px,
+        rgb(0 0 0 / 0) 2px 4px
+      ),
+      repeating-linear-gradient(#000 0 2px, rgb(0 0 0 / 0) 2px 4px),
+      linear-gradient(#007f0c, #004306);
     --lbl-shadow: #000;
-    --btn-pseudo-text: #00CC14;
-    --like-contour: #00CC14;
+    --btn-pseudo-text: #00cc14;
+    --like-contour: #00cc14;
   }
 
-    .page {
-      font-variation-settings: 'wght' var(--main-wght, 465);
-      background-color: var(--bg-color, #000);
-      color: var(--accent-color, #00CC14);
-      background-image: var(--bg-img);
-    }
+  .page {
+    color: var(--accent-color, #00cc14);
+    background-color: var(--bg-color, #000);
+    background-image: var(--bg-img);
+    font-variation-settings: "wght" var(--main-wght, 465);
+  }
 
-    .content-section, dialog {
-      background-color: var(--bg-color, #000);
-      border: 2px solid var(--accent-color, #00CC14);
-    }
+  .content-section,
+  dialog {
+    border: 2px solid var(--accent-color, #00cc14);
+    background-color: var(--bg-color, #000);
+  }
 
-    .dialog__button {
-      border: 2px solid var(--accent-color, #00CC14);
-    }
+  .dialog__button {
+    border: 2px solid var(--accent-color, #00cc14);
+  }
 
-    .card__label {
-      text-shadow:
-      -1px 0 var(--lbl-shadow, #000),
-      0 1px var(--lbl-shadow, #000),
-      1px 0 var(--lbl-shadow, #000),
-      0 -1px var(--lbl-shadow, #000);
-    }
+  .card__label {
+    text-shadow: -1px 0 var(--lbl-shadow, #000), 0 1px var(--lbl-shadow, #000),
+      1px 0 var(--lbl-shadow, #000), 0 -1px var(--lbl-shadow, #000);
+  }
 
-    @supports((text-stroke: 1px var(--lbl-shadow, #000)) or (-webkit-text-stroke: 1px var(--lbl-shadow, #000))) {
-      .theme-dark .card__label {
-          -webkit-text-stroke: 1px var(--lbl-shadow, #000);
-          text-stroke: 1px var(--lbl-shadow, #000);
-          text-shadow: none;
-      }
-    }
+  .card__icon-button:focus-visible {
+    border: 2px solid var(--accent-color, #00cc14);
+  }
 
-    .card__icon-button:focus-visible {
-      border: 2px solid var(--accent-color, #00CC14);
-    }
+  .card__like-button {
+    border: 2px solid var(--accent-color, #00cc14);
+  }
 
-    .card__like-button {
-      border: 2px solid var(--accent-color, #00CC14);
-    }
+  .theme-menu__button:focus-visible::after {
+    background-color: var(--accent-color, #00cc14);
+  }
 
-    .theme-menu__button:focus-visible::after {
-      background-color: var(--accent-color, #00CC14);
-    }
-
-    .card__icon-button:hover .core {
-      fill: var(--like-contour, #00CC14);
-    }
+  .card__icon-button:hover .core {
+    fill: var(--like-contour, #00cc14);
+  }
 
   .card__icon-button:hover .main-body {
-      fill: var(--like-contour, #00CC14);
-    }
+    fill: var(--like-contour, #00cc14);
+  }
 
-    .card__like-button:focus, .footer__button:focus {
-      box-shadow: 2px 2px 0 var(--accent-color, #00CC14);
-    }
+  .card__like-button:focus,
+  .footer__button:focus {
+    box-shadow: 2px 2px 0 var(--accent-color, #00cc14);
+  }
 
-    .card__like-button::after, .footer__button::after {
-      background-color: var(--accent-color, #00CC14);
-      color: var(--btn-pseudo-text, #00CC14);
-    }
+  .card__like-button::after,
+  .footer__button::after {
+    color: var(--btn-pseudo-text, #00cc14);
+    background-color: var(--accent-color, #00cc14);
+  }
 
-    .footer {
-      background-color: var(--bg-color, #000);
-    }
+  .footer {
+    background-color: var(--bg-color, #000);
+  }
 
-    .footer__button {
-      border: 2px solid var(--accent-color, #00CC14);
-      color: var(--accent-color, #00CC14);
-    }
+  .footer__button {
+    border: 2px solid var(--accent-color, #00cc14);
+    color: var(--accent-color, #00cc14);
+  }
 }
-

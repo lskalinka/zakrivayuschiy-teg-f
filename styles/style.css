@@ -15,19 +15,19 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  font-family: var(--main-font, sans-serif);
-  font-variation-settings: 'wght' var(--main-wght, 400);
-  font-size: 18px;
-  background-color: var(--bg-color, #FFF);
-  color: var(--accent-color, #000);
-  background-image: var(--bg-img);
-  background-size: cover;
-  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--accent-color, #000);
+  font-family: var(--main-font, sans-serif);
+  font-size: 18px;
+  background-color: var(--bg-color, #fff);
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--main-wght, 400);
 }
 
 dialog {
@@ -36,14 +36,14 @@ dialog {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: opacity 0.3s ease-in-out;
-  inline-size: clamp(341px, 40vw, 357px);
-  background-color: var(--bg-color, #FFF);
   border: 2px solid var(--accent-color, #000);
+  padding: 0;
   color: inherit;
   font-family: var(--accent-font, fantasy);
   font-size: 14px;
-  padding: 0;
+  background-color: var(--bg-color, #fff);
+  transition: opacity 0.3s ease-in-out;
+  inline-size: clamp(341px, 40vw, 357px);
 }
 
 dialog:not([open]) {
@@ -60,10 +60,10 @@ dialog::backdrop {
   display: grid;
   grid-template-columns: 39px 1fr;
   grid-template-rows: 1fr;
-  margin: 32px auto 30px;
-  gap: 20px;
-  inline-size: 82%;
   align-items: center;
+  gap: 20px;
+  margin: 32px auto 30px;
+  inline-size: 82%;
 }
 
 .dialog__img {
@@ -71,45 +71,45 @@ dialog::backdrop {
 }
 
 .dialog__text {
-  text-transform: uppercase;
-  line-height: 150%;
-  max-inline-size: clamp(198px, 70%, 234px);
   justify-self: flex-start;
+  line-height: 150%;
+  text-transform: uppercase;
+  max-inline-size: clamp(198px, 70%, 234px);
 }
 
 .dialog__button {
-  line-height: 90%;
-  text-transform: uppercase;
-  padding: 9px 0;
   margin: 0 0 32px;
   border: 2px solid var(--accent-color, #000);
+  padding: 9px 0;
+  line-height: 90%;
+  text-transform: uppercase;
   background-color: transparent;
   inline-size: 82%;
 }
 
 .header {
-  margin: 102px auto 104px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 102px auto 104px;
   font-family: var(--accent-font, fantasy);
 }
 
 .content-section {
-  inline-size: var(--sc-wdth, clamp(375px, 48vw, 796px));
-  background-color: var(--bg-color, #FFF);
   border: 2px solid var(--accent-color, #000);
+  background-color: var(--bg-color, #fff);
+  inline-size: var(--sc-wdth, clamp(375px, 48vw, 796px));
 }
 
 .header__logo {
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   margin: clamp(120px, 2.2em, 136px) auto 20px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 .header__heading {
+  margin-block-end: 25px;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
-  margin-block-end: 25px;
 }
 
 .header__theme-menu {
@@ -124,11 +124,11 @@ dialog::backdrop {
 
 .theme-menu__button {
   position: relative;
-  padding: 0;
   margin: 0;
   border: none;
-  background-color: transparent;
+  padding: 0;
   text-transform: uppercase;
+  background-color: transparent;
 }
 
 .theme-menu__button:hover {
@@ -147,20 +147,20 @@ dialog::backdrop {
 
 .theme-menu__button::after {
   content: "";
-  opacity: 0.6;
-  block-size: 2px;
-  inline-size: 100%;
-  background-color: var(--accent-color, #000);
   position: absolute;
   top: 100%;
   left: 0;
+  opacity: 0.6;
+  background-color: var(--accent-color, #000);
   transform: scaleX(0);
   transform-origin: left;
+  block-size: 2px;
+  inline-size: 100%;
 }
 
 .theme-menu__button:focus-visible::after {
-  transform: scaleX(1);
   transition: transform 0.3s ease;
+  transform: scaleX(1);
 }
 
 .theme-menu__button:disabled {
@@ -170,10 +170,15 @@ dialog::backdrop {
 }
 
 .theme-menu__button:disabled::before {
-  content: '▶';
+  content: "▶";
   position: absolute;
   left: -24px;
-  animation: menu-arrow 0.5s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .theme-menu__button:disabled::before {
+    animation: menu-arrow 0.5s ease-in-out infinite alternate;
+  }
 }
 
 .main {
@@ -189,9 +194,9 @@ dialog::backdrop {
 }
 
 .card__heading {
-  font-variation-settings: 'wght' var(--h-wght, 700);
   padding: 3px 0 3px 7px;
   font-size: 18px;
+  font-variation-settings: "wght" var(--h-wght, 700);
 }
 
 .card__img-container {
@@ -199,11 +204,11 @@ dialog::backdrop {
 }
 
 .card__img {
-  inline-size: 100%;
-  aspect-ratio: 1 / 1;
   position: relative;
   z-index: 1;
-  background-position: cover;
+  background-size: cover;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .sepia-blur {
@@ -243,49 +248,49 @@ dialog::backdrop {
   top: 25px;
   right: 25px;
   z-index: 2;
-  mix-blend-mode: hard-light;
+  opacity: 0.5;
   font-family: var(--accent-font, fantasy);
   font-size: 14px;
-  opacity: 0.5;
   text-transform: uppercase;
-  text-shadow:
-  -1px 0 var(--lbl-shadow, #FFF),
-  0 1px var(--lbl-shadow, #FFF),
-  1px 0 var(--lbl-shadow, #FFF),
-  0 -1px var(--lbl-shadow, #FFF);
+  text-shadow: -1px 0 var(--lbl-shadow, #fff), 0 1px var(--lbl-shadow, #fff),
+    1px 0 var(--lbl-shadow, #fff), 0 -1px var(--lbl-shadow, #fff);
+  mix-blend-mode: hard-light;
 }
 
-@supports((text-stroke: 1px var(--lbl-shadow, #FFF)) or (-webkit-text-stroke: 1px var(--lbl-shadow, #FFF))) {
+@supports (
+  (text-stroke: 1px var(--lbl-shadow, #fff)) or
+    (-webkit-text-stroke: 1px var(--lbl-shadow, #fff))
+) {
   .card__label {
-      -webkit-text-stroke: 1px var(--lbl-shadow, #FFF);
-      text-stroke: 1px var(--lbl-shadow, #FFF);
-      text-shadow: none;
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--lbl-shadow, #fff);
+    text-stroke: 1px var(--lbl-shadow, #fff);
   }
 }
 
 .card__text {
-  margin: 25px;
   display: flex;
   flex-direction: column;
   gap: 27px;
+  margin: 25px;
 }
 
 .card__buttons {
-  align-self: flex-end;
-  margin: 0 25px 25px 0;
   display: flex;
   justify-content: center;
   gap: 12px;
+  align-self: flex-end;
+  margin: 0 25px 25px 0;
 }
 
 .card__icon-button {
-  padding: 0;
   margin: 0;
   border: none;
+  border: 2px solid transparent;
+  padding: 0;
   background-color: transparent;
   block-size: 39px;
   inline-size: 42px;
-  border: 2px solid transparent;
 }
 
 .card__icon-button:focus {
@@ -329,106 +334,114 @@ dialog::backdrop {
 }
 
 .card__icon-button:active .core {
-  fill: var(--like-main, #FF0000);
+  fill: var(--like-main, #ff0000);
   transition: fill 0.3s linear;
 }
 
 .card__icon-button:active .main-body {
-  fill: var(--like-main, #FF0000);
+  fill: var(--like-main, #ff0000);
   transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--like-main, #FF0000);
+  fill: var(--like-main, #ff0000);
   transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--like-main, #FF0000);
+  fill: var(--like-main, #ff0000);
   transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--like-main, #FF0000);
+  fill: var(--like-main, #ff0000);
   transition: fill 0.3s linear 0.06s;
 }
 
-.like-icon.is-liked .heart {
-  animation: scale 0.3s ease-in 0.1s 2 alternate;
-  transform-origin: center;
+@media (prefers-reduced-motion: no-preference) {
+  .like-icon.is-liked .heart {
+    transform-origin: center;
+    animation: scale 0.3s ease-in 0.1s 2 alternate;
+  }
 }
 
-.like-icon.is-liked .sparks {
-  animation: sparks-opacity 0.3s ease-in 0.3s 2 alternate;
+@media (prefers-reduced-motion: no-preference) {
+  .like-icon.is-liked .sparks {
+    animation: sparks-opacity 0.3s ease-in 0.3s 2 alternate;
+  }
 }
 
 .card__like-button {
-  min-inline-size: 130px;
-  background-color: transparent;
   border: 2px solid var(--accent-color, #000);
   padding: 9px 17px;
+  background-color: transparent;
+  min-inline-size: 130px;
   block-size: 39px;
 }
 
-.card__like-button, .footer__button {
+.card__like-button,
+.footer__button {
   position: relative;
 }
 
-.card__like-button:focus, .footer__button:focus {
-  outline: none;
+.card__like-button:focus,
+.footer__button:focus {
   box-shadow: 2px 2px 0 var(--accent-color, #000);
+  outline: none;
   transition: box-shadow 0.3s ease;
 }
 
-.card__like-button::after, .footer__button::after {
+.card__like-button::after,
+.footer__button::after {
   content: "";
-  inline-size: 100%;
-  height: 100%;
+  position: absolute;
   top: 0;
   left: 0;
-  position: absolute;
-  color: var(--bg-color, #FFF);
-  background-color: var(--bg-color, #FFF);
-  mix-blend-mode: difference;
+  height: 100%;
+  color: var(--bg-color, #fff);
+  background-color: var(--bg-color, #fff);
   transform: scaleX(0);
   transform-origin: left;
+  inline-size: 100%;
+  mix-blend-mode: difference;
 }
 
-.card__like-button:hover::after, .footer__button:hover::after {
-  transform: scaleX(1);
+.card__like-button:hover::after,
+.footer__button:hover::after {
   transition: transform 0.5s ease-in-out;
+  transform: scaleX(1);
 }
 
 .button__text {
+  position: relative;
   font-family: var(--accent-font, fantasy);
   font-size: 14px;
-  position: relative;
 }
 
 .footer {
   margin: 54px 0 105px;
-  background-color: var(--bg-color, #FFF);
+  background-color: var(--bg-color, #fff);
   inline-size: clamp(306px, 23vw, 335px);
   min-block-size: 48px;
 }
 
 .footer__button {
-  inline-size: 100%;
   display: grid;
-  align-items: center;
   grid-template-columns: 21px 1fr;
+  align-items: center;
   gap: 8px;
-  background-color: transparent;
-  color: var(--accent-color, #000);
   border: 2px solid var(--accent-color, #000);
   padding: 11.5px 17px;
+  color: var(--accent-color, #000);
+  background-color: transparent;
+  inline-size: 100%;
 }
 
 .footer__button-img {
   position: relative;
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
   .content-section {
     inline-size: 100vw;
   }

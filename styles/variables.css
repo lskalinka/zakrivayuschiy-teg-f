@@ -4,13 +4,19 @@
   --accent-font: PressStart2P;
   --main-wght: 400;
   --h-wght: 700;
-  --bg-color: #FFF;
+  --bg-color: #fff;
   --accent-color: #000;
-  --bg-img: repeating-linear-gradient(-90deg, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), repeating-linear-gradient(#d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
+  --bg-img: repeating-linear-gradient(
+      -90deg,
+      #d3d3d3 0 2px,
+      rgb(211 211 211 / 0) 2px 4px
+    ),
+    repeating-linear-gradient(#d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px),
+    linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
   --sc-wdth: clamp(375px, 48vw, 796px);
-  --lbl-shadow: #FFF;
-  --btn-pseudo-text: #FFF;
+  --lbl-shadow: #fff;
+  --btn-pseudo-text: #fff;
   --like-contour: #000;
-  --like-sparks: #FF0000;
-  --like-main: #FF0000;
+  --like-sparks: #ff0000;
+  --like-main: #ff0000;
 }
