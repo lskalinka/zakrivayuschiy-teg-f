@@ -206,6 +206,38 @@ dialog::backdrop {
   background-position: cover;
 }
 
+.sepia-blur {
+  filter: blur(1px) sepia(40%);
+}
+
+.bright-contrast {
+  filter: brightness(80%) contrast(120%);
+}
+
+.saturate {
+  filter: saturate(200%);
+}
+
+.contrast {
+  filter: contrast(150%);
+}
+
+.invert {
+  filter: invert(20%);
+}
+
+.grayscale {
+  filter: grayscale(20%);
+}
+
+.hue {
+  filter: hue-rotate(-10deg);
+}
+
+.bright {
+  filter: brightness(85%);
+}
+
 .card__label {
   position: absolute;
   top: 25px;
@@ -322,12 +354,12 @@ dialog::backdrop {
 }
 
 .like-icon.is-liked .heart {
-  animation: scale 0.3s ease-in 0.1s alternate;
+  animation: scale 0.3s ease-in 0.1s 2 alternate;
   transform-origin: center;
 }
 
 .like-icon.is-liked .sparks {
-  animation: sparks-opacity 0.3s ease-in 0.3s alternate;
+  animation: sparks-opacity 0.3s ease-in 0.3s 2 alternate;
 }
 
 .card__like-button {
