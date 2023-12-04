@@ -12,6 +12,7 @@
   --bg-img: repeating-linear-gradient(-90deg, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), repeating-linear-gradient(#d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
   --lbl-shadow: #FFF;
   --btn-pseudo-text: #FFF;
+  --like-contour: #000;
 }
 
 .theme-light .page {
@@ -46,12 +47,24 @@
   }
 }
 
+.theme-light .card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color, #000);
+}
+
 .theme-light .card__like-button {
   border: 2px solid var(--accent-color, #000);
 }
 
 .theme-light .theme-menu__button:focus-visible::after {
   background-color: var(--accent-color, #000);
+}
+
+.theme-light .card__icon-button:hover .core {
+  fill: var(--like-contour, #000);
+}
+
+.theme-light .card__icon-button:hover .main-body {
+  fill: var(--like-contour, #000);
 }
 
 .theme-light .card__like-button:focus, .theme-light .footer__button:focus {
@@ -80,6 +93,7 @@
   --bg-img: repeating-linear-gradient(-90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px), repeating-linear-gradient(#000 0 2px, rgb(0 0 0 / 0) 2px 4px), linear-gradient(#007f0c, #004306);
   --lbl-shadow: #000;
   --btn-pseudo-text: #00CC14;
+  --like-contour: #00CC14;
 }
 
 .theme-dark .page {
@@ -112,6 +126,18 @@
       text-stroke: 1px var(--lbl-shadow, #000);
       text-shadow: none;
   }
+}
+
+.theme-dark .card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color, #00CC14);
+}
+
+.theme-dark .card__icon-button:hover .core {
+  fill: var(--like-contour, #00CC14);
+}
+
+.theme-dark .card__icon-button:hover .main-body {
+  fill: var(--like-contour, #00CC14);
 }
 
 .theme-dark .card__like-button {
@@ -149,6 +175,7 @@
     --bg-img: repeating-linear-gradient(-90deg, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), repeating-linear-gradient(#d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), linear-gradient(#e7e7e7 0 0.01%, #1a1a1a);
     --lbl-shadow: #FFF;
     --btn-pseudo-text: #FFF;
+    --like-contour: #000;
   }
 
   .page {
@@ -183,6 +210,10 @@
     border: 2px solid var(--accent-color, #000);
   }
 
+  .card__icon-button:focus-visible {
+    border: 2px solid var(--accent-color, #000);
+  }
+
   .card__like-button {
     border: 2px solid var(--accent-color, #000);
   }
@@ -198,6 +229,14 @@
   .card__like-button::after {
   background-color: var(--bg-color, #FFF);
   color: var(--btn-pseudo-text, #FFF);
+  }
+
+.card__icon-button:hover .core {
+    fill: var(--like-contour, #000);
+  }
+
+.card__icon-button:hover .main-body {
+    fill: var(--like-contour, #000);
   }
 
   .footer__button::after {
@@ -224,6 +263,7 @@
     --bg-img: repeating-linear-gradient(-90deg, #000 0 2px, rgb(0 0 0 / 0) 2px 4px), repeating-linear-gradient(#000 0 2px, rgb(0 0 0 / 0) 2px 4px), linear-gradient(#007f0c, #004306);
     --lbl-shadow: #000;
     --btn-pseudo-text: #00CC14;
+    --like-contour: #00CC14;
   }
 
     .page {
@@ -258,12 +298,24 @@
       }
     }
 
+    .card__icon-button:focus-visible {
+      border: 2px solid var(--accent-color, #00CC14);
+    }
+
     .card__like-button {
       border: 2px solid var(--accent-color, #00CC14);
     }
 
     .theme-menu__button:focus-visible::after {
       background-color: var(--accent-color, #00CC14);
+    }
+
+    .card__icon-button:hover .core {
+      fill: var(--like-contour, #00CC14);
+    }
+
+  .card__icon-button:hover .main-body {
+      fill: var(--like-contour, #00CC14);
     }
 
     .card__like-button:focus, .footer__button:focus {

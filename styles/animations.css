@@ -17,3 +17,13 @@
   from { left: -24px; }
   to { left: -20px; }
 }
+
+@keyframes scale {
+  from {transform: scale(1);}
+  to {transform: scale(1.5);}
+}
+
+@keyframes sparks-opacity {
+  from {opacity: 0}
+  to {opacity: 1}
+}

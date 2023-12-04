@@ -10,4 +10,7 @@
   --sc-wdth: clamp(375px, 48vw, 796px);
   --lbl-shadow: #FFF;
   --btn-pseudo-text: #FFF;
+  --like-contour: #000;
+  --like-sparks: #FF0000;
+  --like-main: #FF0000;
 }
