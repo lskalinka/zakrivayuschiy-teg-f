@@ -191,6 +191,7 @@ dialog::backdrop {
 .card__heading {
   font-variation-settings: 'wght' var(--h-wght, 700);
   padding: 3px 0 3px 7px;
+  font-size: 18px;
 }
 
 .card__img-container {
@@ -202,6 +203,7 @@ dialog::backdrop {
   aspect-ratio: 1 / 1;
   position: relative;
   z-index: 1;
+  background-position: cover;
 }
 
 .card__label {
@@ -404,7 +406,7 @@ dialog::backdrop {
   }
 
   .footer {
-    padding-block-end: 102px;
+    margin-block-end: 102px;
   }
 
   .footer__button {
