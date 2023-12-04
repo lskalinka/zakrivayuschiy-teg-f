@@ -114,6 +114,7 @@ dialog::backdrop {
 
 .header__theme-menu {
   margin-block-end: 25px;
+  font-size: 14px;
 }
 
 .theme-menu__list {

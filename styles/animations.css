@@ -15,11 +15,11 @@
 
 @keyframes menu-arrow {
   from {
-    left: -24px;
+    left: -20px;
   }
 
   to {
-    left: -20px;
+    left: -16px;
   }
 }
 
