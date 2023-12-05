@@ -75,12 +75,14 @@
 }
 
 .theme-light .card__like-button:focus,
-.theme-light .footer__button:focus {
+.theme-light .footer__button:focus,
+.theme-light .dialog__button:focus {
   box-shadow: 2px 2px 0 var(--accent-color, #000);
 }
 
 .theme-light .card__like-button::after,
-.theme-light .footer__button::after {
+.theme-light .footer__button::after,
+.theme-light .dialog__button::after {
   color: var(--btn-pseudo-text, #fff);
   background-color: var(--bg-color, #fff);
 }
@@ -170,7 +172,8 @@
 }
 
 .theme-dark .card__like-button::after,
-.theme-dark .footer__button::after {
+.theme-dark .footer__button::after,
+.theme-dark .dialog__button::after {
   color: var(--btn-pseudo-text, #00cc14);
   background-color: var(--accent-color, #00cc14);
 }
@@ -248,7 +251,8 @@
   }
 
   .card__like-button:focus,
-  .footer__button:focus {
+  .footer__button:focus,
+  .dialog__button:focus {
     box-shadow: 2px 2px 0 var(--accent-color, #000);
   }
 
@@ -352,12 +356,14 @@
   }
 
   .card__like-button:focus,
-  .footer__button:focus {
+  .footer__button:focus,
+  .dialog__button:focus {
     box-shadow: 2px 2px 0 var(--accent-color, #00cc14);
   }
 
   .card__like-button::after,
-  .footer__button::after {
+  .footer__button::after,
+  .dialog__button::after {
     color: var(--btn-pseudo-text, #00cc14);
     background-color: var(--accent-color, #00cc14);
   }
